@@ -1,0 +1,26 @@
+CREATE TABLE [meta].[ProcessingSteps]
+(
+	[SourceSystemType] [varchar](100) NULL,
+	[SourceObjectName] [varchar](255) NULL,
+	[ColumnNames] [varchar](8000) NULL,
+	[TargetTableName] [varchar](255) NULL,
+	[PartitionedColumn] [varchar](100) NULL,
+	[AdditionalFilters] [varchar](200) NULL,
+	[TableId] [bigint] NULL,
+	[Layer] [varchar](6) NOT NULL,
+	[TableType] [varchar](20) NOT NULL,
+	[ImportType] [varchar](50) NULL,
+	[DeltaColumnName] [varchar](100) NULL,
+	[DeltaColumnMaxValue] [varchar](100) NULL,
+	[ContainerPath] [varchar](1000) NULL,
+	[ArtifactName] [varchar](50) NULL,
+	[OrderNo] [int] NULL,
+	[ObjectType] [varchar](50) NULL,
+	[StepCreationDate] [datetime2](2) NULL,
+	[StepModificationDate] [datetime2](2) NULL,
+	[Status] [int] NULL,
+	[SourceSystemName] [varchar](100) NULL,
+	[SourceContainerName] [varchar](50) NULL,
+	[IsCurrent] [int] NOT NULL
+)
+GO

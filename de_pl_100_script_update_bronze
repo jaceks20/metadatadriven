@@ -1,0 +1,7 @@
+update
+set A.Status=B.Status, A.StepModificationDate=B.CreateDate
+from meta.ProcessingSteps A join meta.tmp_ProcessingSteps B
+on A.TableId=B.TableId and A.Layer=B.Layer
+where
+A.IsCurrent=1
+and A.Layer='Bronze'
